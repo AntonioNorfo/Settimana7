@@ -47,3 +47,29 @@ document.addEventListener("DOMContentLoaded", function () {
     mostraValoriSalvati();
   });
 });
+//secondo esercizio
+
+function updateCounter() {
+  // Ottieni il valore del contatore dal sessionStorage
+  let counterValue = sessionStorage.getItem("counterValue");
+
+  // Se non esiste, inizializza il contatore a 0
+  if (!counterValue) {
+    counterValue = 0;
+  } else {
+    // Incrementa il valore del contatore
+    counterValue = parseInt(counterValue, 10) + 1;
+  }
+
+  // Salva il valore aggiornato nel sessionStorage
+  sessionStorage.setItem("counterValue", counterValue);
+
+  // Mostra il valore aggiornato nella pagina
+  document.getElementById("counter").textContent = counterValue;
+}
+
+// Chiama la funzione updateCounter ogni secondo
+setInterval(updateCounter, 1000);
+
+// Chiama immediatamente la funzione per impostare il valore iniziale
+updateCounter();
