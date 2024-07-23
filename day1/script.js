@@ -41,10 +41,6 @@ class Pet {
     this.species = _species;
     this.breed = _breed;
   }
-
-  hasSameOwner(otherPet) {
-    return this.ownerName === otherPet.ownerName;
-  }
 }
 document.addEventListener("DOMContentLoaded", () => {
   const petForm = document.querySelector("form");
@@ -54,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
   petForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    // Raccogli i dati dal form
     const petName = document.getElementById("petName").value;
     const ownerName = document.getElementById("OwnerName").value;
     const species = document.getElementById("Species").value;
