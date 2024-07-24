@@ -65,7 +65,7 @@ function updateCounter() {
   sessionStorage.setItem("counterValue", counterValue);
 
   // Mostra il valore aggiornato nella pagina
-  document.getElementById("counter").textContent = counterValue;
+  document.getElementById("counter").innerText = counterValue;
 }
 
 // Chiama la funzione updateCounter ogni secondo
